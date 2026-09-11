@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curiosities & Musings</title>
+  
+  <!-- Google Fonts: Special Elite + Creepster for Burtonesque Title Accent -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Special+Elite&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Palette */
+      --bg-black: #08070b;
+      --card-purple: #130f1d;
+      --card-purple-hover: #1c162b;
+      --border-gothic: #6b2d86;
+      
+      --orange: #ff7518;
+      --green: #39ff14;
+      --purple-accent: #b15eff;
+      --ghost-white: #f3f3f7;
+      --muted-text: #a49cb5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-black);
+      color: var(--ghost-white);
+      font-family: 'Special Elite', monospace;
+      line-height: 1.7;
+      padding: 2.5rem 1rem;
+      max-width: 950px;
+      margin: 0 auto;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(107, 45, 134, 0.18) 0%, transparent 65%),
+        radial-gradient(circle at 10% 90%, rgba(57, 255, 20, 0.05) 0%, transparent 50%);
+    }
+
+    /* Tim Burton Spiral / Divider Detail */
+    .spiral-accent {
+      text-align: center;
+      color: var(--orange);
+      font-size: 1.5rem;
+      letter-spacing: 0.3rem;
+      user-select: none;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px dashed var(--border-gothic);
+    }
+
+    header h1 {
+      font-family: 'Creepster', cursive;
+      font-size: 3.2rem;
+      color: var(--orange);
+      letter-spacing: 3px;
+      text-shadow: 0 0 15px rgba(255, 117, 24, 0.4);
+      margin-bottom: 0.2rem;
+    }
+
+    header p {
+      color: var(--green);
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .tab-btn {
+      background: var(--card-purple);
+      color: var(--ghost-white);
+      border: 1px solid var(--border-gothic);
+      padding: 0.7rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Special Elite', monospace;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+    }
+
+    .tab-btn:hover {
+      background: var(--card-purple-hover);
+      border-color: var(--green);
+      color: var(--green);
+      box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+    }
+
+    .tab-btn.active {
+      background: var(--orange);
+      color: var(--bg-black);
+      font-weight: bold;
+      border-color: var(--orange);
+      box-shadow: 0 0 14px rgba(255, 117, 24, 0.5);
+    }
+
+    /* Tab Sections */
+    .content-section {
+      display: none;
+      animation: spookyFade 0.4s ease-in-out;
+    }
+
+    .content-section.active {
+      display: block;
+    }
+
+    @keyframes spookyFade {
+      from { opacity: 0; transform: translateY(10px) scale(0.99); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* About Section Card */
+    .about-card {
+      background: var(--card-purple);
+      border: 1px solid var(--border-gothic);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    }
+
+    .about-card h2 {
+      color: var(--orange);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px dashed var(--border-gothic);
+      padding-bottom: 0.5rem;
+    }
+
+    .about-card p {
+      color: var(--muted-text);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-card ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .about-card li {
+      margin-bottom: 0.5rem;
+      color: var(--ghost-white);
+    }
+
+    .about-card li span {
+      color: var(--green);
+    }
+
+    /* Standard Cards Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-purple);
+      border: 1px solid var(--border-gothic);
+      border-radius: 10px;
+      padding: 1.4rem;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--green);
+      box-shadow: 0 0 15px rgba(57, 255, 20, 0.25);
+    }
+
+    .card h3 {
+      color: var(--ghost-white);
+      font-size: 1.25rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card .tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      background: rgba(177, 94, 255, 0.15);
+      color: var(--purple-accent);
+      border: 1px solid var(--border-gothic);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.9rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--muted-text);
+    }
+
+    /* Diary List */
+    .diary-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+    }
+
+    .entry {
+      background: var(--card-purple);
+      border-left: 4px solid var(--orange);
+      border-top: 1px solid var(--border-gothic);
+      border-right: 1px solid var(--border-gothic);
+      border-bottom: 1px solid var(--border-gothic);
+      padding: 1.4rem;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .entry .date {
+      font-size: 0.85rem;
+      color: var(--green);
+      margin-bottom: 0.4rem;
+    }
+
+    .entry h3 {
+      color: var(--ghost-white);
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 2px dashed var(--border-gothic);
+      font-size: 0.85rem;
+      color: var(--muted-text);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="spiral-accent">🌀 🕸️ 🌀</div>
+    <h1>The Night Cabinet</h1>
+    <p>A repository of dark fairytales, late-night musings, and secret archives.</p>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav>
+    <button class="tab-btn active" onclick="showTab('about', event)">🕷️ The Curator</button>
+    <button class="tab-btn" onclick="showTab('movies', event)">🎬 Movies & Shows</button>
+    <button class="tab-btn" onclick="showTab('anime', event)">⛩️ Anime</button>
+    <button class="tab-btn" onclick="showTab('fanfics', event)">📖 Fanfics</button>
+    <button class="tab-btn" onclick="showTab('recipes', event)">🍳 Brews & Eats</button>
+    <button class="tab-btn" onclick="showTab('diary', event)">📓 Night Log</button>
+  </nav>
+
+  <!-- About Tab -->
+  <section id="about" class="content-section active">
+    <div class="about-card">
+      <h2>Curator's Manifesto</h2>
+      <p>Welcome to my corner of the web. I build digital archives to externalize late-night thoughts, catalog atmospheric cinema, and document creative fixations before they vanish into the dark.</p>
+      <ul>
+        <li><span>✦ Aesthetic:</span> Gothic realism, dark fairytales, atmospheric isolation, and haunting storytelling.</li>
+        <li><span>✦ Rituals:</span> Midnight writing sessions, collecting dark-themed art, and organizing chaos into quiet sanctuaries.</li>
+        <li><span>✦ Current Vibe:</span> Searching for stories where the monster isn't always the villain, and the atmosphere speaks louder than dialogue.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Movies & Shows Tab -->
+  <section id="movies" class="content-section">
+    <div class="grid">
+      
+      <div class="card">
+        <h3>Pan's Labyrinth</h3>
+        <span class="tag">Dark Fairytale • Guillermo del Toro</span>
+        <p>A dark masterpiece blending tragic reality with eerie fantasy. The labyrinth isn't just a physical place—it's an escape into a terrifyingly beautiful world where monsters test the innocence of a child.</p>
+      </div>
+
+      <div class="card">
+        <h3>Where the Crawdads Sing</h3>
+        <span class="tag">Atmospheric Mystery • Southern Gothic</span>
+        <p>A story of isolation, survival, and secrets hidden deep in the quiet marshlands. Highly atmospheric, emotional, and rooted in the haunting beauty of nature standing as a silent witness.</p>
+      </div>
+
+      <div class="card">
+        <h3>Coraline</h3>
+        <span class="tag">Stop-Motion • Gothic Fantasy</span>
+        <p>The ultimate dark animated tale. Button eyes, hidden doors, and a creepy parallel world that perfectly captures the unsettling, whimsically eerie vibe.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Anime Tab -->
+  <section id="anime" class="content-section">
+    <div class="grid">
+      <div class="card">
+        <h3>Anime Title Here</h3>
+        <span class="tag">Dark Fantasy / Psychological</span>
+        <p>Add your favorite atmospheric anime, key arcs, and character notes here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fanfics Tab -->
+  <section id="fanfics" class="content-section">
+    <div class="grid">
+      <div class="card">
+        <h3>Archive Entry</h3>
+        <span class="tag">Fandom / Pairing</span>
+        <p>Plot summary, dark atmosphere, or personal rating for favorite works.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipes Tab -->
+  <section id="recipes" class="content-section">
+    <div class="grid">
+      <div class="card">
+        <h3>Midnight Comfort Elixir</h3>
+        <span class="tag">Warm Brew • Easy</span>
+        <p><strong>Ingredients:</strong> Dark cocoa, cinnamon, pinch of nutmeg, almond milk.</p>
+        <p style="margin-top:0.5rem;"><strong>Notes:</strong> Best consumed late at night while reading or organizing notes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diary & Thoughts Tab -->
+  <section id="diary" class="content-section">
+    <div class="diary-list">
+      
+      <div class="entry">
+        <div class="date">Late Night Log • 03:00 AM</div>
+        <h3>Clearing the Static</h3>
+        <p>Some nights are meant for externalizing the noise inside my head. Putting thoughts down into code and quiet spaces makes the mind feel lighter when everything else gets overwhelming.</p>
+      </div>
+
+      <div class="entry">
+        <div class="date">Twilight Log • Archive Entry</div>
+        <h3>On Monsters and Marshes</h3>
+        <p>Thinking about how the best stories aren't afraid of dark endings. Stories like <em>Pan's Labyrinth</em> and <em>Where the Crawdads Sing</em> remind me that being misunderstood is just another way of belonging to your own world.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="spiral-accent">🌀 👻 🌀</div>
+    <p>Curated in the dark • All rights reserved</p>
+  </footer>
+
+  <script>
+    function showTab(tabId, event) {
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.classList.remove('active');
+      });
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>
