@@ -1,59 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Afterdark Archives — A Personal Journal</title>
-  <meta name="description" content="A mature, colorful macabre personal website for recipes, films, books, anime, diary entries, thoughts, and hobbies." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Afterdark Archives — A Living Scrapbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#17151b;--paper:#eee8d8;--muted:#bcb5a5;--acid:#b7d46a;--orange:#e8753c;--violet:#5f426f;--line:rgba(238,232,216,.18)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font-family:'DM Sans',sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}.noise{position:fixed;inset:0;pointer-events:none;opacity:.06;z-index:20;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(23,21,27,.88);backdrop-filter:blur(16px);z-index:10}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}.brand{font-family:'Special Elite';letter-spacing:1px;font-size:18px}.brand span{color:var(--acid)}nav{display:flex;gap:24px;font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted)}nav a:hover{color:var(--acid)}
+.hero{min-height:760px;display:grid;align-items:center;position:relative;overflow:hidden}.hero:before{content:'';position:absolute;width:650px;height:650px;right:-180px;top:80px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--violet),transparent 68%);filter:blur(8px);opacity:.8}.hero:after{content:'✳';position:absolute;right:9%;top:22%;font-size:230px;color:var(--orange);opacity:.12;transform:rotate(18deg)}.eyebrow{font-family:'Special Elite';color:var(--acid);letter-spacing:2px;font-size:13px}.hero h1{font:700 clamp(58px,10vw,132px)/.9 'Playfair Display',serif;max-width:850px;margin:22px 0}.hero h1 em{color:var(--orange);font-weight:600}.intro{max-width:550px;color:var(--muted);font-size:17px}.actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}.button{border:1px solid var(--line);padding:13px 19px;font-size:12px;letter-spacing:1px;text-transform:uppercase}.button.primary{background:var(--acid);color:var(--ink);border-color:var(--acid)}.button:hover{transform:translateY(-2px)}
+.section{padding:105px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:34px}.section h2{font:600 clamp(34px,5vw,64px)/1 'Playfair Display',serif;margin:10px 0}.section-intro{color:var(--muted);max-width:430px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.card{position:relative;min-height:260px;padding:26px;background:linear-gradient(145deg,#29232f,#1e1b22);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}.card:before{content:'';position:absolute;inset:auto -30px -90px auto;width:220px;height:220px;border-radius:50%;background:var(--violet);opacity:.45}.card:nth-child(2):before{background:var(--orange)}.card:nth-child(3):before{background:var(--acid)}.card:nth-child(4):before{background:#466c70}.card>*{position:relative;z-index:1}.wide{grid-column:span 7}.small{grid-column:span 5}.card .number{font-family:'Special Elite';color:var(--acid)}.card h3{font:600 32px/1.1 'Playfair Display',serif;margin:12px 0}.card p{color:var(--muted);max-width:370px}.link{font-family:'Special Elite';color:var(--orange);font-size:14px}.tag{display:inline-block;border:1px solid var(--line);padding:5px 9px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin:4px 4px 0 0}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:22px}.panel{background:var(--paper);color:var(--ink);padding:38px;min-height:350px;position:relative}.panel.dark{background:#29232f;color:var(--paper)}.panel h3{font:600 38px/1.05 'Playfair Display',serif;margin:15px 0}.panel p{color:#625d56}.panel.dark p{color:var(--muted)}.stamp{font-family:'Special Elite';font-size:12px;letter-spacing:1px;color:var(--orange)}
+footer{padding:45px 0;color:var(--muted);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;font-size:12px}.footer-brand{font-family:'Special Elite';color:var(--acid)}
+@media(max-width:750px){nav{display:none}.hero{min-height:650px}.hero h1{font-size:64px}.section{padding:70px 0}.section-head{display:block}.wide,.small{grid-column:span 12}.feature{grid-template-columns:1fr}.panel{padding:27px}footer{display:block}footer div+div{margin-top:12px}}
+</style>
 </head>
 <body>
-  <div class="grain"></div><div class="orb orb-green"></div><div class="orb orb-orange"></div>
-  <header class="site-header">
-    <a class="brand" href="#home"><span class="brand-mark">✶</span> AFTERDARK <em>ARCHIVES</em></a>
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#interests">Interests</a><a href="#journal">Journal</a><a href="#favorites">Favorites</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-copy">
-        <p class="eyebrow">A PERSONAL CABINET OF CURIOSITIES</p>
-        <h1>Beautiful things<br />for <span>strange nights.</span></h1>
-        <p class="lede">Recipes worth repeating, stories worth keeping, tiny obsessions, unfinished thoughts, and everything interesting found after dark.</p>
-        <div class="hero-actions"><a class="button primary" href="#journal">Open the journal ↗</a><a class="button secondary" href="#interests">Wander around</a></div>
-        <div class="signature">Filed under: curiosity, craft & controlled chaos.</div>
-      </div>
-      <div class="hero-art" aria-label="Abstract moon, botanical and occult-inspired decorative artwork">
-        <div class="moon"></div><div class="sigil">✳</div><div class="leaf leaf-a">☘</div><div class="leaf leaf-b">☾</div>
-        <div class="art-label">VOL. 01<br /><span>THE NIGHT EDITION</span></div>
-      </div>
-    </section>
-
-    <section class="intro section" id="about"><div class="section-heading"><p class="eyebrow">A LITTLE ABOUT THIS PLACE</p><h2>Not a portfolio.<br /><i>A living scrapbook.</i></h2></div><div class="intro-text"><p>This is my corner of the internet: part journal, part moodboard, part archive of the things I keep coming back to.</p><p>Expect imperfect notes, favorite scenes, experimental recipes, desk projects, and rabbit holes that started with “I wonder…”</p></div></section>
-
-    <section class="section" id="interests"><p class="eyebrow">THE MAIN ROOMS</p><h2>Choose your <span>rabbit hole.</span></h2><div class="interest-grid">
-      <article class="interest recipe"><span class="number">01</span><div><p class="tag">KITCHEN NOTES</p><h3>Recipes</h3><p>Comfort food, experiments, midnight snacks, and things I want to make again.</p><a href="#">Enter the kitchen →</a></div></article>
-      <article class="interest tech"><span class="number">02</span><div><p class="tag">MAKER'S DESK</p><h3>Keyboards & PC Builds</h3><p>Switches, keycaps, cable chaos, components, upgrades, and beautiful little machines.</p><a href="#">Inspect the setup →</a></div></article>
-      <article class="interest culture"><span class="number">03</span><div><p class="tag">THE VIEWING ROOM</p><h3>Movies, Books & Anime</h3><p>Stories that linger, characters that haunt me, and recommendations from the archive.</p><a href="#favorites">Browse favorites →</a></div></article>
-      <article class="interest explore"><span class="number">04</span><div><p class="tag">OUTSIDE THE MAP</p><h3>Exploring New Things</h3><p>New places, new skills, new hobbies, and beautiful detours with no clear destination.</p><a href="#journal">Follow the trail →</a></div></article>
-    </div></section>
-
-    <section class="section journal" id="journal"><div class="section-heading"><p class="eyebrow">RECENTLY UNEARTHED</p><h2>Notes from the <span>darkroom.</span></h2></div><div class="journal-grid"><article class="entry"><p class="date">OCT 31 · 11:47 PM</p><h3>On making room for curiosity</h3><p>A reminder that not every interest needs to become a side hustle. Some things can simply be loved.</p><a href="#">Read entry →</a></article><article class="entry"><p class="date">OCT 18 · 09:12 PM</p><h3>The perfect desk is a moving target</h3><p>Thoughts on rearranging a workspace, chasing the right sound profile, and knowing when to stop tweaking.</p><a href="#">Read entry →</a></article><article class="entry"><p class="date">OCT 04 · 01:03 AM</p><h3>Things I want to try next</h3><p>A loose list of places, recipes, creative projects, and rabbit holes waiting patiently in the queue.</p><a href="#">Read entry →</a></article></div></section>
-
-    <section class="section favorites" id="favorites"><p class="eyebrow">THE PERSONAL CANON</p><h2>Current <span>favorites.</span></h2><div class="favorite-list"><div><span>FILM</span><strong>Replace with a favorite movie</strong><small>A scene, a feeling, and why it stayed.</small></div><div><span>BOOK</span><strong>Replace with a favorite book</strong><small>Something underlined, dog-eared, or unforgettable.</small></div><div><span>ANIME</span><strong>Replace with a favorite anime</strong><small>The opening theme is probably stuck in my head.</small></div></div></section>
-
-    <section class="closing section"><p class="eyebrow">THE ARCHIVE IS ALWAYS GROWING</p><h2>Stay curious.<br /><span>Leave a trace.</span></h2><p>More pages, lists, photos, and tiny discoveries coming soon.</p><a class="button primary" href="mailto:hello@example.com">Send a signal ✉</a></section>
-  </main>
-  <footer><span>© <span id="year"></span> Afterdark Archives</span><span>Made with curiosity & a little mischief.</span></footer>
-  <script>
-const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));document.getElementById('year').textContent=new Date().getFullYear();
-
-</script>
-</body>
-</html>
+<div class="noise"></div>
+<header><div class="wrap nav"><a class="brand" href="#top">AFTERDARK <span>✳</span> ARCHIVES</a><nav><a href="#rooms">Rooms</a><a href="#notes">Notes</a><a href="#about">About</a></nav></div></header>
+<main id="top">
+<section class="hero"><div class="wrap"><div class="eyebrow">PERSONAL ARCHIVE / VOL. 01</div><h1>Not a portfolio.<br><em>A living scrapbook.</em></h1><p class="intro">A corner of the internet for recipes, strange rabbit holes, favorite stories, desk projects, diary fragments, and all the little things worth remembering.</p><div class="actions"><a class="button primary" href="#rooms">Enter the archive ↓</a><a class="button" href="#about">Read the field notes</a></div></div></section>
+<section class="section" id="rooms"><div class="wrap"><div class="section-head"><div><div class="eyebrow">THE MAIN ROOMS</div><h2>Choose your rabbit hole.</h2></div><p class="section-intro">Organized loosely. Updated whenever inspiration, curiosity, or insomnia strikes.</p></div>
+<div class="grid">
+<a class="card wide" href="#recipes"><div><div class="number">01 / KITCHEN NOTES</div><h3>Recipes & midnight experiments</h3><p>Comfort food, curious combinations, and things I want to make again.</p></div><span class="link">Enter the kitchen →</span></a>
+<a class="card small" href="#maker"><div><div class="number">02 / MAKER'S DESK</div><h3>Keyboards & PC builds</h3><p>Switches, keycaps, components, upgrades, and beautiful little machines.</p></div><span class="link">Inspect the setup →</span></a>
+<a class="card small" href="#stories"><div><div class="number">03 / VIEWING ROOM</div><h3>Movies, books & anime</h3><p>Stories that linger, characters that haunt me, and recommendations.</p></div><span class="link">Browse favorites →</span></a>
+<a class="card wide" href="#explore"><div><div class="number">04 / OUTSIDE THE MAP</div><h3>Exploring new things</h3><p>New places, new skills, new hobbies, and beautiful detours with no clear destination.</p></div><span class="link">Follow the trail →</span></a>
+</div></div></section>
+<section class="section" id="notes"><div class="wrap"><div class="section-head"><div><div class="eyebrow">RECENT FRAGMENTS</div><h2>Notes from the margins.</h2></div><p class="section-intro">A few starting points for the archive. Replace these with your own entries whenever you're ready.</p></div><div class="feature"><article class="panel"><div class="stamp">FIELD NOTE / 001</div><h3>Things I want to learn before the year ends</h3><p>A running list of skills, places, recipes, and questions. Some will become projects. Some will remain wonderfully unfinished.</p><span class="tag">thoughts</span><span class="tag">journal</span></article><article class="panel dark"><div class="stamp">MOODBOARD / 002</div><h3>The color of a rainy afternoon</h3><p>Muted green, warm desk light, the sound of keys, and a film playing in the background. A small atmosphere worth keeping.</p><span class="tag">aesthetic</span><span class="tag">daily life</span></article></div></div></section>
+<section class="section" id="recipes"><div class="wrap"><div class="eyebrow">01 / KITCHEN NOTES</div><h2>Recipes worth repeating.</h2><p class="section-intro">A place for comfort meals, experiments, and handwritten instructions that somehow always need improvising.</p></div></section>
+<section class="section" id="maker"><div class="wrap"><div class="eyebrow">02 / MAKER'S DESK</div><h2>Small machines, big rabbit holes.</h2><p class="section-intro">Keyboard builds, PC parts, desk changes, and the joy of making something feel like yours.</p></div></section>
+<section class="section" id="stories"><div class="wrap"><div class="eyebrow">03 / VIEWING ROOM</div><h2>Stories that stay after the credits.</h2><p class="section-intro">Favorite movies, books, anime, characters, scenes, and recommendations from the archive.</p></div></section>
+<section class="section" id="explore"><div class="wrap"><div class="eyebrow">04 / OUTSIDE THE MAP</div><h2>Follow the curiosity.</h2><p class="section-intro">New hobbies, unfamiliar places, experiments, and discoveries that begin with a simple “I wonder…”</p></div></section>
+<section class="section" id="about"><div class="wrap"><div class="eyebrow">ABOUT THE ARCHIVE</div><h2>Personal, imperfect, alive.</h2><p class="section-intro">This is not meant to be polished into a brand. It's a digital room for collecting the things I love, the things I'm learning, and the thoughts I don't want to lose.</p></div></section>
+</main>
+<footer class="wrap"><div><span class="footer-brand">AFTERDARK ARCHIVES</span><br>Made slowly, somewhere after midnight.</div><div>© 2026 / A personal corner of the internet</div></footer>
+</body></html>
