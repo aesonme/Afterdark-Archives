@@ -1,30 +1,116 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Afterdark Archives — A Halloween Scrapbook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halloween Whispers — A Cozy Witch's Diary</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Special+Elite&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#f3eadb;--muted:#b9aa9a;--black:#09070d;--panel:#17111e;--purple:#4b235d;--violet:#8e4bb1;--green:#8dbb59;--orange:#e86e28;--line:#493447;--glow:0 0 28px #8e4bb133}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 8%,#40204f 0,transparent 25%),radial-gradient(circle at 10% 45%,#183322 0,transparent 28%),var(--black);color:var(--ink);font-family:Georgia,serif;line-height:1.6}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");z-index:5}.wrap{width:min(1160px,92%);margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);font:12px 'Special Elite',monospace;letter-spacing:2px;text-transform:uppercase}.brand{color:var(--green)}.status{color:var(--orange)}header{min-height:720px;position:relative;display:grid;align-items:center;padding:85px 0 100px;overflow:hidden}.moon{position:absolute;width:390px;height:390px;border-radius:50%;right:4%;top:60px;background:#e9d5a7;box-shadow:0 0 90px #dba75d55;opacity:.92}.moon:after{content:"";position:absolute;inset:30px;background:radial-gradient(circle at 25% 30%,#b9a477 0 6%,transparent 7%),radial-gradient(circle at 65% 60%,#b9a477 0 9%,transparent 10%),radial-gradient(circle at 35% 75%,#b9a477 0 4%,transparent 5%);border-radius:50%;opacity:.45}.bats{position:absolute;right:20%;top:95px;color:#09070d;font-size:35px;letter-spacing:25px;transform:rotate(-8deg)}.hero{position:relative;z-index:1;max-width:760px}.eyebrow{color:var(--orange);font:14px 'Special Elite',monospace;letter-spacing:3px;text-transform:uppercase}.sigil{font-family:'UnifrakturCook',serif;font-size:clamp(30px,5vw,65px);color:var(--green);margin:18px 0 -5px}.hero h1{font:600 clamp(54px,9vw,125px)/.9 'Cinzel',serif;letter-spacing:-5px;margin:0;text-transform:uppercase;text-shadow:5px 5px 0 #321b3d}.hero h1 span{color:var(--orange)}.hero p{font-size:20px;color:var(--muted);max-width:620px;margin:28px 0}.cta{display:inline-block;border:1px solid var(--orange);color:var(--ink);padding:13px 20px;text-decoration:none;font:13px 'Special Elite',monospace;letter-spacing:1px;transition:.2s}.cta:hover{background:var(--orange);color:#130b0a;box-shadow:var(--glow)}.warning{margin-top:35px;color:var(--green);font:12px 'Special Elite',monospace;letter-spacing:1px}.section{padding:75px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:28px}.section h2{font:600 clamp(28px,4vw,52px)/1 'Cinzel',serif;margin:8px 0}.section-kicker{font:12px 'Special Elite',monospace;color:var(--orange);letter-spacing:2px;text-transform:uppercase}.section-note{max-width:340px;color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{position:relative;min-height:245px;padding:22px;background:linear-gradient(145deg,#211629,#100d14);border:1px solid var(--line);overflow:hidden;transition:.25s}.card:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 55%,#8dbb5912);pointer-events:none}.card:hover{transform:translateY(-5px);border-color:var(--green);box-shadow:var(--glow)}.card .num{font:12px 'Special Elite',monospace;color:var(--orange)}.card .icon{font-size:40px;position:absolute;right:18px;top:18px;filter:grayscale(.15)}.card h3{font:600 22px 'Cinzel',serif;margin:60px 0 8px}.card p{color:var(--muted);font-size:14px}.card a{color:var(--green);font:12px 'Special Elite',monospace;text-decoration:none}.feature{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.panel{padding:30px;background:#110d17;border:1px solid var(--line)}.panel h3{font:24px 'Cinzel',serif;margin:0 0 15px}.panel p{color:var(--muted)}.entry{border-left:2px solid var(--orange);padding-left:18px;margin:20px 0}.entry small{font:12px 'Special Elite',monospace;color:var(--green)}.entry strong{display:block;font:20px 'Cinzel',serif}.tag{display:inline-block;border:1px solid #536d43;color:var(--green);padding:4px 8px;margin:4px 4px 0 0;font:11px 'Special Elite',monospace}.footer{padding:50px 0 75px;text-align:center;color:var(--muted);font:12px 'Special Elite',monospace;letter-spacing:1px}.pumpkin{color:var(--orange)}@media(max-width:850px){.moon{width:250px;height:250px;right:-80px;top:90px;opacity:.35}.hero h1{letter-spacing:-2px}.grid{grid-template-columns:repeat(2,1fr)}.feature{grid-template-columns:1fr}.section-head{display:block}.section-note{margin-top:15px}}@media(max-width:500px){.grid{grid-template-columns:1fr}.topbar{font-size:10px}.hero p{font-size:17px}header{min-height:650px}}
+:root{
+  --paper:#f4ead4; --paper2:#ead9b9; --ink:#201c18; --green:#4f642d;
+  --orange:#c95c20; --purple:#514064; --muted:#77684f; --line:#bca57d;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:#d6c6a4;color:var(--ink);font-family:"Special Elite",serif;
+background-image:radial-gradient(#6e583b18 .8px,transparent .8px);background-size:6px 6px}
+a{color:inherit;text-decoration:none}.page{max-width:1450px;margin:auto;background:var(--paper);min-height:100vh;box-shadow:0 0 40px #30251830;overflow:hidden}
+header{padding:22px 4.5%;border-bottom:2px dashed #927d5d;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;margin-right:auto}.cauldron{font-size:43px;filter:drop-shadow(2px 3px 0 #8d714a)}
+.brand h1{font-size:30px;line-height:1;margin:0}.brand small{display:block;font:12px "DM Sans";letter-spacing:2px;color:var(--green);margin-top:8px}
+nav{display:flex;gap:23px;flex-wrap:wrap;font-size:15px}nav a{padding:8px 0;border-bottom:2px solid transparent}nav a:hover{color:var(--orange);border-color:var(--orange)}
+.hero{padding:35px 4.5% 28px;display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:center}
+.hero-copy{padding:35px 5%;position:relative}.eyebrow{font-size:14px;letter-spacing:3px;color:var(--green);margin-bottom:15px}
+.hero h2{font-size:clamp(52px,6vw,105px);line-height:.92;margin:0 0 24px;letter-spacing:-3px}
+.hero h2 em{color:var(--purple);font-family:"Playfair Display";letter-spacing:-2px}
+.hero p{font-size:19px;line-height:1.6;max-width:480px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:14px 22px;border:1px solid var(--ink);box-shadow:4px 4px 0 var(--ink);font-size:15px;background:var(--green);color:#fff7e5}.btn.alt{background:var(--orange)}.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.hero-art{min-height:440px;position:relative;border:2px solid #8e7651;background:#b7a17c;overflow:hidden;box-shadow:8px 8px 0 #66553d}
+.moon{position:absolute;width:245px;height:245px;border-radius:50%;background:#d9b85e;right:12%;top:8%;box-shadow:0 0 0 12px #d9b85e22}
+.moon:after{content:"";position:absolute;background:#b7a17c;width:245px;height:245px;border-radius:50%;left:58px;top:-18px}
+.house{position:absolute;bottom:0;right:8%;width:58%;height:64%;background:#292b28;clip-path:polygon(50% 0,100% 35%,100% 100%,0 100%,0 35%);border:4px solid #201c18}
+.house:before{content:"";position:absolute;inset:24% 13% 0;background:repeating-linear-gradient(90deg,#201c18 0 20px,#b47a32 21px 31px);opacity:.85}
+.window{position:absolute;width:35px;height:48px;background:#e5a33b;box-shadow:0 0 22px #e5a33b;bottom:24%;left:43%;border:5px solid #1c1d1b}
+.witch{position:absolute;left:6%;bottom:10%;font-size:100px;transform:rotate(-8deg);filter:drop-shadow(4px 5px 0 #302318)}
+.bat{position:absolute;font-size:42px;color:#28221c}.b1{top:12%;left:12%}.b2{top:33%;right:8%}.b3{bottom:20%;left:45%}
+.pumpkin{position:absolute;font-size:80px;bottom:7%;left:9%;filter:drop-shadow(3px 4px 0 #53351f)}
+.tape{position:absolute;background:#657047;width:125px;height:35px;opacity:.85;transform:rotate(-22deg);top:25px;left:-30px}
+.section{padding:18px 4.5% 45px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:2px solid var(--line);padding-top:20px}.section-title h3{font-size:32px;margin:0}.section-title span{color:var(--orange)}
+.tabs{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}.tab{padding:12px 22px;border:1px solid var(--line);background:#f8efdc;cursor:pointer;font:16px "Special Elite"}.tab.active{background:var(--green);color:white}
+.entries{display:grid;gap:16px}.entry{display:grid;grid-template-columns:230px 1fr auto;gap:24px;align-items:center;background:#efe0c3;border:1px solid #bda47a;padding:16px;box-shadow:4px 4px 0 #c8b18a}
+.entry-art{height:145px;display:grid;place-items:center;font-size:65px;background:linear-gradient(145deg,#4f642d,#b65b2b);border:5px solid #e2cfaa;outline:1px solid #826d4c}.entry:nth-child(2) .entry-art{background:linear-gradient(145deg,#514064,#b77c37)}.entry:nth-child(3) .entry-art{background:linear-gradient(145deg,#2e4031,#c95c20)}
+.entry h4{font-size:25px;margin:0 0 8px}.meta{font-size:13px;color:var(--green);margin-bottom:10px}.entry p{font-size:16px;line-height:1.55;margin:0}.read{background:var(--purple);color:white;padding:13px 18px;white-space:nowrap;border:1px solid #34293f}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px;margin-top:22px}.card{background:#efe0c3;border:1px solid var(--line);padding:20px;min-height:180px;position:relative;box-shadow:3px 3px 0 #c8b18a}.card .icon{font-size:42px}.card h4{font-size:20px;margin:15px 0 8px}.card p{font:14px/1.5 "DM Sans";color:#625540}.card a{color:var(--orange);font-size:14px}
+.lower{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;margin-top:22px}.note{background:#f8efdc;border:1px solid var(--line);padding:28px;position:relative}.note h4{font-size:26px;margin:0 0 14px}.note p{font-size:16px;line-height:1.7}.currently li{list-style:none;padding:11px 0;border-bottom:1px dashed var(--line);font-size:15px}.currently ul{padding:0;margin:0}
+footer{background:#403449;color:#f5e9d0;padding:28px 4.5%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px}.social{display:flex;gap:16px;color:#e7a15c}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-art{min-height:350px}.entry{grid-template-columns:150px 1fr}.entry .read{grid-column:2;justify-self:start}.grid{grid-template-columns:repeat(2,1fr)}.lower{grid-template-columns:1fr}}
+@media(max-width:560px){header{padding:18px 5%}.brand h1{font-size:24px}nav{gap:13px;font-size:12px}.hero{padding:22px 5%}.hero-copy{padding:15px 0}.hero h2{font-size:58px}.hero-art{min-height:300px}.section{padding:18px 5% 32px}.entry{grid-template-columns:1fr}.entry-art{height:130px}.entry .read{grid-column:auto}.grid{grid-template-columns:1fr}.section-title h3{font-size:25px}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<div class="topbar"><div class="brand">✶ Afterdark Archives</div><div class="status">☾ October state of mind / online</div></div>
-<header id="home"><div class="moon"></div><div class="bats">⌁ ʚɞ ⌁</div><div class="hero"><div class="eyebrow">A personal archive · Volume 13</div><div class="sigil">The</div><h1>Halloween<br><span>Afterdark</span></h1><p>Not a portfolio. A living scrapbook of recipes, strange interests, favorite stories, desk experiments, and thoughts best written after midnight.</p><a class="cta" href="#rooms">Enter the archive →</a><div class="warning">✦ Warning: may contain cozy dread, unfinished ideas, and too many tabs.</div></div></header>
-<section class="section" id="rooms"><div class="section-head"><div><div class="section-kicker">The main rooms</div><h2>Choose your rabbit hole.</h2></div><div class="section-note">A little haunted, a little handmade, and entirely mine.</div></div><div class="grid">
-<article class="card"><div class="num">01 / Kitchen notes</div><div class="icon">🎃</div><h3>Recipes</h3><p>Comfort food, midnight snacks, experiments, and things worth making again.</p><a href="#recipes">Enter the kitchen →</a></article>
-<article class="card"><div class="num">02 / Maker's desk</div><div class="icon">⌨️</div><h3>Keyboards & PCs</h3><p>Switches, keycaps, cable chaos, components, upgrades, and little machines.</p><a href="#desk">Inspect the setup →</a></article>
-<article class="card"><div class="num">03 / The viewing room</div><div class="icon">🕯️</div><h3>Stories</h3><p>Movies, books, anime, favorite scenes, and characters that linger.</p><a href="#stories">Browse favorites →</a></article>
-<article class="card"><div class="num">04 / Outside the map</div><div class="icon">🦇</div><h3>Exploring</h3><p>New places, new skills, hobbies, and rabbit holes with no clear destination.</p><a href="#explore">Follow the trail →</a></article>
-</div></section>
-<section class="section" id="recipes"><div class="section-head"><div><div class="section-kicker">01 / Kitchen notes</div><h2>Things I make after dark.</h2></div></div><div class="feature"><div class="panel"><h3>Current craving: pumpkin-spiced comfort</h3><p>A place for recipes that feel like autumn: warm spices, browned butter, late-night noodles, and experiments that may or may not work.</p><span class="tag">cozy food</span><span class="tag">experiments</span><span class="tag">midnight snacks</span></div><div class="panel"><h3>Recipe log</h3><div class="entry"><small>ENTRY 001</small><strong>Something warm & orange</strong>Still testing the perfect balance of spice.</div><div class="entry"><small>ENTRY 002</small><strong>The next kitchen experiment</strong>To be documented with crumbs and questionable measurements.</div></div></div></section>
-<section class="section" id="desk"><div class="section-head"><div><div class="section-kicker">02 / Maker's desk</div><h2>Small machines, big rabbit holes.</h2></div></div><div class="feature"><div class="panel"><h3>Keyboard laboratory</h3><p>Mechanical switches, sound profiles, keycap sets, layouts, stabilizers, and the endless pursuit of a satisfying clack.</p><span class="tag">mechanical keyboards</span><span class="tag">modding</span></div><div class="panel"><h3>PC build notes</h3><p>A running record of parts, upgrades, cable management, troubleshooting, and the joy of making a machine feel like mine.</p><span class="tag">PC building</span><span class="tag">hardware</span></div></div></section>
-<section class="section" id="stories"><div class="section-head"><div><div class="section-kicker">03 / The viewing room</div><h2>Stories that follow me home.</h2></div></div><div class="grid"><article class="card"><div class="icon">🎞️</div><h3>Favorite movies</h3><p>Scenes, soundtracks, comfort watches, and films that leave a strange little echo.</p></article><article class="card"><div class="icon">📚</div><h3>Favorite books</h3><p>Lines I underline, worlds I revisit, and books that change shape over time.</p></article><article class="card"><div class="icon">⛩️</div><h3>Favorite anime</h3><p>Characters, openings, arcs, and stories that occupy too much of my brain.</p></article><article class="card"><div class="icon">🕸️</div><h3>Rabbit holes</h3><p>Reviews, theories, recommendations, and the things I discover at 2 a.m.</p></article></div></section>
-<section class="section" id="explore"><div class="section-head"><div><div class="section-kicker">04 / Outside the map</div><h2>Curiosity leaves footprints.</h2></div></div><div class="feature"><div class="panel"><h3>Currently exploring</h3><p>New skills, places, hobbies, and ideas that begin with one harmless question: “I wonder…”</p><div class="entry"><small>FIELD NOTE</small><strong>Try something unfamiliar</strong>Keep the outcome uncertain. Keep the notes honest.</div></div><div class="panel"><h3>Private thoughts, public fragments</h3><p>A soft landing place for diary entries, passing thoughts, small victories, and observations that deserve to be kept.</p><span class="tag">journal</span><span class="tag">thoughts</span><span class="tag">life lately</span></div></div></section>
-<footer class="footer"><div class="pumpkin">☠︎ ✦ 🎃 ✦ ☾</div><p>Made by me, somewhere between midnight and morning.</p><p>© <span id="year"></span> Afterdark Archives</p></footer>
-</div><script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body></html>
+<div class="page">
+<header>
+  <a class="brand" href="#home"><div class="cauldron">🫧</div><div><h1>Halloween Whispers</h1><small>A COZY WITCH'S PERSONAL ARCHIVE</small></div></a>
+  <nav><a href="#home">Home</a><a href="#diary">Diary</a><a href="#favorites">Stories & Books</a><a href="#favorites">Movies & Shows</a><a href="#hobbies">Hobbies & Art</a><a href="#recipes">Food Reviews</a><a href="#games">Games</a><a href="#about">About Me</a>⌕</nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <div class="eyebrow">✦ A LITTLE MAGIC ON THE INTERNET ✦</div>
+    <h2>Halloween<br><em>Whispers</em></h2>
+    <p>Thoughts, moments, recipes, rabbit holes, and all the tiny things that make ordinary days feel a little enchanted.</p>
+    <div class="buttons"><a class="btn" href="#diary">Enter the diary →</a><a class="btn alt" href="#favorites">Explore the archive →</a></div>
+  </div>
+  <div class="hero-art" aria-label="Decorative Halloween illustration">
+    <div class="tape"></div><div class="moon"></div><div class="bat b1">🦇</div><div class="bat b2">🦇</div><div class="bat b3">✦</div><div class="house"><div class="window"></div></div><div class="witch">🧙🏻‍♀️</div><div class="pumpkin">🎃</div>
+  </div>
+</section>
+
+<section class="section" id="diary">
+  <div class="section-title"><h3>Latest diary entries <span>✦</span></h3><span>October, always</span></div>
+  <div class="tabs"><button class="tab active" onclick="filterEntries('all',this)">All Entries</button><button class="tab" onclick="filterEntries('thoughts',this)">Daily Thoughts</button><button class="tab" onclick="filterEntries('life',this)">Life Updates</button><button class="tab" onclick="filterEntries('gratitude',this)">Gratitude</button></div>
+  <div class="entries">
+    <article class="entry" data-type="thoughts"><div class="entry-art">🧹🎃</div><div><div class="meta">OCTOBER 20, 2024 · DAILY THOUGHTS</div><h4>A Cozy October Day 🎃</h4><p>Cool breeze, warm tea, spooky playlists, and a whole day to myself. There is something magical about October.</p></div><a class="read" href="#about">Read more →</a></article>
+    <article class="entry" data-type="life"><div class="entry-art">🌙🐈‍⬛</div><div><div class="meta">OCTOBER 15, 2024 · LIFE UPDATES</div><h4>Moonlit Walks & Overthinking 🌙</h4><p>Late-night walks help clear my mind. The city is quiet, the stars are pretty, and so are my thoughts.</p></div><a class="read" href="#about">Read more →</a></article>
+    <article class="entry" data-type="gratitude"><div class="entry-art">🧪🍵</div><div><div class="meta">OCTOBER 12, 2024 · GRATITUDE</div><h4>Small Wins ✨</h4><p>Made my bed, drank water, finished that chapter, replied to an old friend. Tiny wins still count.</p></div><a class="read" href="#about">Read more →</a></article>
+  </div>
+</section>
+
+<section class="section" id="favorites">
+  <div class="section-title"><h3>My favorite things <span>✦</span></h3><span>Collected with affection</span></div>
+  <div class="grid">
+    <article class="card"><div class="icon">📚</div><h4>Stories & Books</h4><p>Books, quotes, fictional worlds, and characters that linger.</p><a href="#about">Browse the shelf →</a></article>
+    <article class="card"><div class="icon">🎬</div><h4>Movies & Shows</h4><p>Comfort watches, horror nights, and scenes I never skip.</p><a href="#about">Open the watchlist →</a></article>
+    <article class="card"><div class="icon">🎌</div><h4>Anime</h4><p>Favorite series, beautiful soundtracks, and memorable arcs.</p><a href="#about">Visit the anime corner →</a></article>
+    <article class="card" id="recipes"><div class="icon">🍵</div><h4>Food & Recipes</h4><p>Midnight snacks, cozy drinks, experiments, and honest reviews.</p><a href="#about">Enter the kitchen →</a></article>
+  </div>
+</section>
+
+<section class="section" id="hobbies">
+  <div class="section-title"><h3>Things I like making <span>✦</span></h3><span>Maker's desk</span></div>
+  <div class="grid">
+    <article class="card"><div class="icon">⌨️</div><h4>Keyboard Modding</h4><p>Switches, keycaps, sound tests, layouts, and desk aesthetics.</p><a href="#about">Inspect the setup →</a></article>
+    <article class="card"><div class="icon">🖥️</div><h4>PC Building</h4><p>Parts lists, upgrades, cable management, and little machines.</p><a href="#about">See the builds →</a></article>
+    <article class="card"><div class="icon">🧭</div><h4>Exploring</h4><p>New places, skills, hobbies, and rabbit holes with no map.</p><a href="#about">Follow the trail →</a></article>
+    <article class="card" id="games"><div class="icon">🎮</div><h4>Games</h4><p>Cozy worlds, strange adventures, and games worth revisiting.</p><a href="#about">Open the game shelf →</a></article>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="lower">
+    <div class="note"><h4>Currently... 🕯️</h4><ul class="currently"><li>📖 Reading: Something atmospheric</li><li>🎬 Watching: A comfort movie</li><li>🎵 Listening: A rainy-day playlist</li><li>💚 Mood: Curious & grateful</li><li>🧪 Making: A new little project</li></ul></div>
+    <div class="note"><h4>A note from me ✉️</h4><p>This is not a polished portfolio. It is a living scrapbook—a place for imperfect notes, favorite things, creative experiments, and whatever catches my attention.</p><a class="btn" href="mailto:hello@example.com">Send a message →</a></div>
+  </div>
+</section>
+
+<footer><div>© 2024 Halloween Whispers · Made with tea, curiosity & a little magic.</div><div class="social"><span>◎ Instagram</span><span>◉ Pinterest</span><span>✉ Email</span></div></footer>
+</div>
+<script>
+function filterEntries(type,button){
+ document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));button.classList.add('active');
+ document.querySelectorAll('.entry').forEach(e=>e.style.display=(type==='all'||e.dataset.type===type)?'grid':'none');
+}
+</script>
+</body>
+</html>
