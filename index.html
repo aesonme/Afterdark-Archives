@@ -51,6 +51,9 @@
     <section class="closing section"><p class="eyebrow">THE ARCHIVE IS ALWAYS GROWING</p><h2>Stay curious.<br /><span>Leave a trace.</span></h2><p>More pages, lists, photos, and tiny discoveries coming soon.</p><a class="button primary" href="mailto:hello@example.com">Send a signal ✉</a></section>
   </main>
   <footer><span>© <span id="year"></span> Afterdark Archives</span><span>Made with curiosity & a little mischief.</span></footer>
-  <script src="script.js"></script>
+  <script>
+const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));document.getElementById('year').textContent=new Date().getFullYear();
+
+</script>
 </body>
 </html>
